@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 15 HTML</title>
+</head>
+<body>
+    <form action="outroNome.php" method="post">
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <div>
+                <label for="">Nome</label><br>
+                <input type="text" name="txtNome" id="txtNome">
+            </div>
+            <div>
+                <label for="">Endereço</label><br>
+                <input type="text" name="txtEndereço" id="txtEndereço">
+            </div>
+            <div>
+                <label for="">cidade</label><br>
+                <input type="text" name="txtCidade" id="txtCidade">
+            </div>
+            <div>
+                <label for="">estado</label><br>
+                <select name="cboEstado" id="cboEstado">
+                    <option value="1">Rio de janeiro</option>
+                    <option value="2">Distrito Federal</option>
+                    <option value="3">Minas gerais</option>
+                    <option value="4">Espirito Santo</option>
+                    <option value="5">São Paulo</option>
+                    <option value="6">Paraíba</option>
+                </select>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>dados profissionais</legend>
+            <div>
+                <label for="">Natureza do cargo</label><br>
+                <input type="radio" name="rdAreaAtuacao" id="rdAreaAtuacao" value="1">Gerência
+
+                <input type="radio" name="rdAreaAtuacao" id="rdAreaAtuacao" value="2">Financeiro
+
+                <input type="radio" name="rdAreaAtuacao" id="rdAreaAtuacao" value="3">Recepção
+
+                <input type="radio" name="rdAreaAtuacao" id="rdAreaAtuacao" value="4">Administrativo
+
+                <input type="radio" name="rdAreaAtuacao" id="rdAreaAtuacao" value="5">Jurídico
+                
+            </div>
+            <br>
+            <div>
+                <label for="">Area de interesse</label><br>
+                <input type="checkbox" name="chkEstado" id="chkEstado" value="1">Computação 
+                <input type="checkbox" name="chkEstado" id="chkEstado" value="2">Biologia 
+                <input type="checkbox" name="chkEstado" id="chkEstado" value="3">Meio ambiente 
+                <input type="checkbox" name="chkEstado" id="chkEstado" value="4">Engenharia 
+                <input type="checkbox" name="chkEstado" id="chkEstado" value="5">Historia 
+            </div>
+            <br>
+            <div>
+                <label for="">Mini-curriculo</label>
+                <textarea name="Mini-curriculo" id="Mini-curriculo" cols="50" rows="5" placeholder="descreva sua experiencia..."></textarea>
+                
+            </div>
+
+        </fieldset>
+        <fieldset>
+            <button type="submit">Cadastrar</button>
+        </fieldset>
+    </form>
+</body>
+</html>

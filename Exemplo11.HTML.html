@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 11 - HTML</title>
+</head>
+
+<body>
+    <h1>Exemplo 11 HTML - Formulários</h1>
+    <p>
+        Um <strong>formulário </strong> em HTML é uma estrutura de coleta de dados que utiliza tags específicas como,
+        form, label, input, button, fieldset e legend para descrever a função e o significado de cada campo. Diferente
+        de usar apenas divisores genéricos para fins estéticos, a semântica garante que <strong>navegadores, leitores de
+            tela e motores de busca</strong> compreendam a relação lógica entre os dados solicitados e seus rótulos,
+        aumentando a acessibilidade e a eficiência no processamento da informação.
+    </p>
+
+    <p>Os métodos GET e POST são as formas mais comuns de enviar dados de um formulário HTML para um servidor, definidos
+        pelo atributo method na tag form.</p>
+    <ul>
+        <li>GET: Envia os dados anexados à URL (query string), visíveis para o usuário, ideal para consultas e buscas.
+        </li>
+        <li>POST: Envia os dados no corpo da requisição (body), não aparecendo na URL, sendo o método recomendado para
+            dados sensíveis, login ou modificação de dados no servidor.</li>
+    </ul>
+
+    <h2>Exemplo de Formulário metodo get</h2>
+    <form action="paginaDestino.aspx" method="get">
+        <div>
+            <label for="">Digite seu e-mail</label><br>
+            <input type="email" nome="txtEmail" id="txtEmail">
+        </div>
+        <br>
+        <div>
+            <label for="">Digite sua senha</label><br>
+            <input type="password" nome="txtSenha" id="txtSenha">
+        </div>
+        <br>
+        <button type="submit">logar</button>
+    </form>
+
+</body>
+
+</html>

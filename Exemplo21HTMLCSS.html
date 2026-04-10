@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo 21 HTML CSS - Introdução ao CSS</title>
+  <style>
+    
+    /* Estilizando o corpo da página */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto; /* Centraliza a página na tela */
+    }
+
+    /* Dando destaque ao título principal */
+    h1 {
+      color: #2c3e50;
+      border-bottom: 3px solid #3498db;
+      padding-bottom: 10px;
+    }
+
+    /* Deixando os subtítulos mais bonitos */
+    h2, h3 {
+      color: #2980b9;
+      margin-top: 30px;
+    }
+
+    /* Formatando as caixas de exemplo de código (as tags <pre>) */
+    pre {
+      background-color: #282c34;
+      color: #abb2bf;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+  
+    /* --- SELETORES DE CLASSE (Usam o ponto final) --- */
+    
+    .destaque {
+      background-color: #f1c40f; /* Fundo amarelo para destacar */
+      color: #000;               /* Texto preto */
+      font-weight: bold;         /* Texto em negrito */
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+
+    .alerta {
+      background-color: #fee2e2; /* Fundo vermelho bem claro */
+      color: #b91c1c;            /* Texto vermelho escuro */
+      padding: 15px;
+      border-left: 5px solid #ef4444; /* Linha vermelha grossa na esquerda */
+      font-weight: bold;
+    }
+
+    .secundario {
+      color: #7f8c8d;            /* Texto cinza */
+      font-style: italic;        /* Texto em itálico */
+    }
+
+    /* --- SELETORES DE ID (Usam a cerquilha/hashtag) --- */
+    
+    #cabecalho {
+      background-color: #2c3e50; /* Fundo azul escuro */
+      color: white;              /* Texto branco */
+      text-align: center;        /* Texto centralizado */
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    #rodape {
+      background-color: #bdc3c7; /* Fundo cinza */
+      color: #333;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 40px;
+      border-radius: 8px;
+    }
+    .exemplo-metodo {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Cria uma sombra bem suave */
+    }
+    
+    /* Para destacar o texto de código no meio dos parágrafos */
+    p code {
+      background-color: #e2e8f0;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #e11d48;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Exemplo 21 HTML CSS - Introdução ao CSS</h1>
+
+  <p>CSS significa Cascading Style Sheets — Folhas de Estilo em Cascata.</p>
+  <p>É a linguagem usada para definir a aparência dos elementos HTML de uma página web.</p>
+  <p>Com CSS é possível controlar cores, fontes, tamanhos, espaçamentos, bordas e muito mais.</p>
+
+
+  <h2>O que é uma Regra CSS</h2>
+
+  <p>Uma regra CSS é composta por um seletor e um bloco de declarações.</p>
+  <p>O seletor indica quais elementos HTML serão estilizados.</p>
+  <p>O bloco de declarações fica entre chaves e contém uma ou mais declarações.</p>
+  <p>Cada declaração é formada por uma propriedade, dois-pontos, um valor e ponto e vírgula.</p>
+
+  <p>Exemplo de regra CSS:</p>
+  <pre>
+    p {
+      color: blue;
+      font-size: 16px;
+    }
+  </pre>
+
+  <p>Neste exemplo, p é o seletor, color e font-size são propriedades, blue e 16px são os valores.</p>
+
+
+  <h2>Tipos de Seletores</h2>
+
+  <p>Existem três tipos fundamentais de seletores CSS.</p>
+
+
+  <h3>Seletor de Tipo</h3>
+
+  <p>O seletor de tipo usa diretamente o nome da tag HTML.</p>
+  <p>Ele afeta todos os elementos daquele tipo que existirem na página.</p>
+  <p>Possui a menor especificidade entre os três tipos.</p>
+
+  <p>Exemplos de seletor de tipo:</p>
+  <pre>
+    h1 { }
+    p  { }
+    a  { }
+    li { }
+  </pre>
+
+  <p>A regra acima com h1 afetará todos os títulos h1 da página.</p>
+  <p>A regra com p afetará todos os parágrafos da página.</p>
+
+
+  <h3>Seletor de Classe</h3>
+
+  <p>O seletor de classe usa um ponto seguido do nome da classe.</p>
+  <p>Ele afeta apenas os elementos que possuem o atributo class com aquele nome.</p>
+  <p>Uma mesma classe pode ser aplicada a vários elementos diferentes.</p>
+  <p>Um mesmo elemento pode ter mais de uma classe ao mesmo tempo.</p>
+  <p>Possui especificidade intermediária — maior que o seletor de tipo.</p>
+
+  <p>Exemplos de seletor de classe:</p>
+  <pre>
+    .destaque   { }
+    .alerta     { }
+    .secundario { }
+  </pre>
+
+  <p>No HTML, a classe é aplicada assim:</p>
+  <pre>
+    <p class="destaque">Este parágrafo tem a classe destaque.</p>
+    <p class="alerta">Este parágrafo tem a classe alerta.</p>
+  </pre>
+
+
+  <h3>Seletor de ID</h3>
+
+  <p>O seletor de ID usa uma cerquilha seguida do nome do id.</p>
+  <p>Ele afeta somente o elemento que possui aquele id.</p>
+  <p>Um id deve ser único na página — não pode se repetir.</p>
+  <p>Possui a maior especificidade entre os três tipos.</p>
+
+  <p>Exemplos de seletor de ID:</p>
+  <pre>
+    #cabecalho { }
+    #rodape    { }
+  </pre>
+
+  <p>No HTML, o id é aplicado assim:</p>
+  <pre>
+    <header id="cabecalho">...</header>
+    <footer id="rodape">...</footer>
+  </pre>
+
+
+  <h2>Especificidade</h2>
+
+  <p>Quando dois seletores disputam a mesma propriedade em um elemento, vence o de maior especificidade.</p>
+  <p>A ordem de especificidade do maior para o menor é: ID, Classe, Tipo.</p>
+  <p>Em valores numéricos: ID vale 100, Classe vale 10, Tipo vale 1.</p>
+
+
+  <h2>Propriedades e Valores</h2>
+
+  <p>Uma propriedade é o aspecto visual que se deseja controlar.</p>
+  <p>O valor define como aquela propriedade será aplicada.</p>
+
+
+  <h3>Propriedades de Texto</h3>
+
+  <p>color — define a cor do texto.</p>
+  <pre>
+    color: red;
+    color: #FF0000;
+    color: rgb(255, 0, 0);
+  </pre>
+
+  <p>font-size — define o tamanho da fonte.</p>
+  <pre>
+    font-size: 16px;
+    font-size: 1.5em;
+    font-size: 1rem;
+  </pre>
+
+  <p>font-weight — define a espessura da fonte.</p>
+  <pre>
+    font-weight: normal;
+    font-weight: bold;
+    font-weight: 700;
+  </pre>
+
+  <p>font-style — define o estilo da fonte.</p>
+  <pre>
+    font-style: normal;
+    font-style: italic;
+  </pre>
+
+  <p>text-align — define o alinhamento horizontal do texto.</p>
+  <pre>
+    text-align: left;
+    text-align: center;
+    text-align: right;
+    text-align: justify;
+  </pre>
+
+  <p>text-decoration — define a decoração do texto.</p>
+  <pre>
+    text-decoration: none;
+    text-decoration: underline;
+    text-decoration: line-through;
+  </pre>
+
+  <p>line-height — define o espaçamento entre linhas.</p>
+  <pre>
+    line-height: 1.5;
+    line-height: 24px;
+  </pre>
+
+
+  <h3>Propriedades de Fundo</h3>
+
+  <p>background-color — define a cor de fundo do elemento.</p>
+  <pre>
+    background-color: yellow;
+    background-color: #FFFF00;
+    background-color: transparent;
+  </pre>
+
+
+  <h3>Propriedades de Espaçamento</h3>
+
+  <p>margin — define o espaço externo ao redor do elemento.</p>
+  <pre>
+    margin: 10px;
+    margin: 10px 20px;
+    margin: 10px 20px 5px 0;
+  </pre>
+
+  <p>padding — define o espaço interno entre o conteúdo e a borda.</p>
+  <pre>
+    padding: 8px;
+    padding: 4px 12px;
+  </pre>
+
+
+  <h3>Propriedades de Borda</h3>
+
+  <p>border — define a borda ao redor do elemento. Recebe largura, estilo e cor.</p>
+  <pre>
+    border: 1px solid black;
+    border: 2px dashed red;
+    border: 3px dotted blue;
+  </pre>
+
+  <p>border-radius — define o arredondamento dos cantos da borda.</p>
+  <pre>
+    border-radius: 4px;
+    border-radius: 50%;
+  </pre>
+
+
+  <h2>Onde escrever o CSS</h2>
+
+  <p>O CSS pode ser escrito em três lugares diferentes.</p>
+
+  <p>Interno — dentro da tag style no head do documento HTML.</p>
+  <pre>
+    <style>
+      p { color: rgb(9, 9, 143); }
+    </style>
+  </pre>
+
+  <p>Externo — em um arquivo separado com extensão .css, linkado no head.</p>
+  <pre>
+    <link rel="stylesheet" href="estilos.css">
+  </pre>
+
+  <p>Inline — diretamente no atributo style do elemento HTML.</p>
+  <pre>
+    <p style="color: rgb(49, 49, 133);">Texto azul.</p>
+  </pre>
+
+
+</body>
+</html>
+
